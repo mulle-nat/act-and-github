@@ -18,12 +18,16 @@ jobs:
 
     - name: Test1
       if: ${{ env.ENV1 }} 
+      run:  echo Test1
 
     - name: Test1.1
       if: ${{ ! env.ENV1 }} 
+      run:  echo Test1
 
     - name: Test2
       if: env.ENV1
+      run:  echo Test1
 
     - name: Test3
       if: ! env.ENV1
+      run:  echo Test1
