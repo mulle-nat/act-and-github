@@ -1,0 +1,29 @@
+name: CI
+
+on: [push]
+
+env:
+  ENV1: true
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest] # macos-latest,
+
+    steps:
+    - name: Dump Environment
+      run:  env | sort
+
+    - name: Test1
+      if: ${{ env.ENV1 }} 
+
+    - name: Test1.1
+      if: ${{ ! env.ENV1 }} 
+
+    - name: Test2
+      if: env.ENV1
+
+    - name: Test3
+      if: ! env.ENV1
