@@ -13,6 +13,7 @@ Note the tests that didn't run:
 
 ## Result with act
 
+```
 [CI/build]   ✅  Success - Dump Environment
 [CI/build] ⭐  Run Test1
 [CI/build]   🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /Volumes/Source/srcM/act-and-github/workflow/1] user=
@@ -26,3 +27,4 @@ Note the tests that didn't run:
 [CI/build]   🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /Volumes/Source/srcM/act-and-github/workflow/5] user=
 | Test3.1
 [CI/build]   ✅  Success - Test3.1
+```
