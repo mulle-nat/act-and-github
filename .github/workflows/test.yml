@@ -28,6 +28,7 @@ jobs:
       if: env.ENV1
       run:  echo Test1
 
-    - name: Test3
-      if: ! env.ENV1
-      run:  echo Test1
+# Invalid on github
+#    - name: Test3
+#      if: ! env.ENV1
+#      run:  echo Test1
