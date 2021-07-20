@@ -4,6 +4,7 @@ on: [push]
 
 env:
   ENV1: true
+# ENV2: # undefined 
 
 jobs:
   build:
@@ -32,3 +33,15 @@ jobs:
 #    - name: Test2.1
 #      if: ! env.ENV1
 #      run:  echo Test2.1
+
+    - name: Test3
+      if: ${{ env.ENV2 }} 
+      run:  echo Test3
+
+    - name: Test3.1
+      if: ${{ ! env.ENV2 }} 
+      run:  echo Test3.1
+
+    - name: Test4
+      if: env.ENV2
+      run:  echo Test4
