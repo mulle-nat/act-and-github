@@ -22,13 +22,13 @@ jobs:
 
     - name: Test1.1
       if: ${{ ! env.ENV1 }} 
-      run:  echo Test1
+      run:  echo Test1.1
 
     - name: Test2
       if: env.ENV1
-      run:  echo Test1
+      run:  echo Test2
 
 # Invalid on github
-#    - name: Test3
+#    - name: Test2.1
 #      if: ! env.ENV1
-#      run:  echo Test1
+#      run:  echo Test2.1
