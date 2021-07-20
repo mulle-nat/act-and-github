@@ -28,17 +28,25 @@ Note the pattern which tests did run and which didn't run:
 [CI/build]   ✅  Success - Test3.1
 ```
 
-The pattern of test ran and not ran, is the same.
+The pattern of tests that ran and that did not run, is the same.
 
 ## Define environment variable in container
 
 Create a docker container that defines ENV2.
 
+`act/Dockerfile`:
+
+```
+FROM catthehacker/ubuntu:act-20.04
+
+ENV ENV2=true
+```
+
 ```
 docker build -t act-and-github:act ./act
 ``` 
 
-Run act with runner image.
+Run act with runner image:
 
 ```
 act -P ubuntu-latest=act-and-github:act -e <( echo '{"push": { "ref": "refs/tags/prerelease" } }' )
